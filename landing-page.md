@@ -31,8 +31,8 @@ I have a lot to say about responsible design, AI governance, and building produc
 
 ### Project 1 — Vrbo
 **Client:** Vrbo
-**Title:** Small copy, big impact
-**Subtitle:** How a single prompt converted 15% more guests into One Key members
+**Title:** Small copy, big impact.
+**Subtitle:** How a single prompt converted 15% more guests into One Key members.
 **Thumbnail:** [INSERT IMAGE: Vrbo_cko_3screens.png]
 **Links to:** full case study (see `vrbo-onekey-signin.md`)
 

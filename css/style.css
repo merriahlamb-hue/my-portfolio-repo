@@ -1,0 +1,900 @@
+/* ---------------------------------------------------
+   Merriah Lamb — Portfolio
+   Design system: flat warm color blocks, ink borders,
+   no shadows, no gradients, one rounded sans throughout.
+--------------------------------------------------- */
+
+:root {
+  --bg: #ffffff;
+  --ink: #000000;
+  --ink-soft: #595959;      /* secondary/body text grey */
+  --accent-a: #f5f5f5;      /* subtle off-white surface — hero card, pull-quote */
+  --accent-a-offset: #d6d6d6; /* mid-light grey — decorative offset shapes & underlines */
+  --accent-b: #ececec;      /* mid-grey panel fill — footer, image frames */
+  --divider: #cccccc;       /* mid-grey hairline dividers (list rules, section separators) */
+  --primary: #000000;       /* black — buttons, accent labels */
+  --primary-hover: #333333; /* dark grey — hover/active state for buttons & links */
+  --primary-ink: var(--bg);
+  --border: var(--ink);
+  --pill-blue: #a9c0e8;     /* capability pill outline colors — the one place colour stays */
+  --pill-green: #4e9a6e;
+  --pill-gold: #c9a66b;
+  --pill-navy: #0f2a5c;
+  --pill-rose: #d98ca0;
+  --dot-color: rgba(140, 152, 224, 0.4); /* light periwinkle — quiet background texture */
+  --max-width: 1100px;
+  --gap-section: clamp(4rem, 8vw, 8.5rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--ink);
+  font-family: "Switzer", "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Explicit heading hierarchy — one shared size/weight per level, sitewide */
+
+h1, h2, h3 {
+  font-family: "Switzer", "Segoe UI", system-ui, sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  line-height: 1.2;
+}
+
+/* Visually matches h2 while keeping the h3 tag's semantic sub-heading level */
+h3.heading-lg {
+  font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+}
+
+p {
+  margin: 0 0 1.1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  padding-block: 2.25rem;
+  border-bottom: 2px solid var(--divider);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.header-links {
+  display: flex;
+  gap: 1.75rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.header-links a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-a-offset);
+  text-underline-offset: 4px;
+}
+
+.header-links a:hover {
+  color: var(--primary-hover);
+}
+
+.back-link {
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--primary-hover);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-block: clamp(2.5rem, 6vw, 5rem) var(--gap-section);
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.hero-card-wrap {
+  position: relative;
+}
+
+.hero-card-offset {
+  position: absolute;
+  inset: 12px -12px -12px 12px;
+  background: var(--accent-a-offset);
+  border-radius: 22px;
+}
+
+.hero-card {
+  position: relative;
+  background: var(--accent-a);
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.75rem, 4vw, 3rem);
+}
+
+.hero-card h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.6rem);
+  max-width: 24ch;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.25rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
+  border: 2px solid var(--ink);
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-ink);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.hero-photo-wrap {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 320px);
+}
+
+.hero-photo-block {
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  background: var(--accent-a-offset);
+  border-radius: 50%;
+}
+
+.hero-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--ink);
+  transform: rotate(-3deg);
+  background: var(--accent-a);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Capabilities ---------- */
+
+.capabilities {
+  padding-block-end: var(--gap-section);
+}
+
+.capabilities h2 {
+  margin-bottom: 2rem;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.pill-blue {
+  border-color: var(--pill-blue);
+}
+
+.pill-green {
+  border-color: var(--pill-green);
+}
+
+.pill-gold {
+  border-color: var(--pill-gold);
+}
+
+.pill-navy {
+  border-color: var(--pill-navy);
+  border-width: 3px;
+}
+
+.pill-rose {
+  border-color: var(--pill-rose);
+}
+
+/* ---------- Featured Work ---------- */
+
+.work {
+  padding-block-end: var(--gap-section);
+}
+
+.work h2 {
+  margin-bottom: 2.5rem;
+}
+
+.work-list {
+  border-top: 2px solid var(--divider);
+}
+
+.work-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding-block: clamp(2rem, 4vw, 3rem);
+  border-bottom: 2px solid var(--divider);
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-row:nth-child(even) .work-thumb {
+  order: 2;
+}
+
+.work-thumb {
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--accent-b);
+}
+
+.work-thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+/* For portrait screenshots that shouldn't be cropped — shows the full UI,
+   letterboxed within the same frame size as the other thumbnails */
+.work-thumb-contain img {
+  object-fit: contain;
+}
+
+.work-client {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+
+.work-title {
+  margin-bottom: 0.6rem;
+}
+
+.work-subtitle {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+a.work-row:hover .work-title {
+  color: var(--primary-hover);
+}
+
+.work-row.is-upcoming {
+  cursor: default;
+}
+
+.work-row.is-upcoming .work-thumb {
+  opacity: 0.55;
+}
+
+.work-status {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- About ---------- */
+
+.about {
+  padding-block-end: var(--gap-section);
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  grid-template-areas:
+    "heading ."
+    "photo   copy";
+  column-gap: clamp(2rem, 5vw, 4rem);
+  row-gap: 1.5rem;
+}
+
+.about h2 {
+  grid-area: heading;
+}
+
+.about-copy {
+  grid-area: copy;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.about-photo-wrap {
+  grid-area: photo;
+  position: relative;
+  width: min(100%, 320px);
+  aspect-ratio: 1 / 1;
+}
+
+.about-photo-offset {
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  background: var(--accent-a-offset);
+  clip-path: url(#avatar-blob);
+}
+
+.about-photo-border {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  clip-path: url(#avatar-blob);
+}
+
+.about-photo {
+  position: absolute;
+  inset: 3px;
+  clip-path: url(#avatar-blob);
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Brands ---------- */
+
+.brands {
+  padding-block-end: var(--gap-section);
+}
+
+.brands h2 {
+  margin-bottom: 2.25rem;
+}
+
+.brand-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+
+.brand-row img {
+  height: 34px;
+  width: auto;
+  opacity: 0.8;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 2px solid var(--divider);
+  padding-block: 2.5rem;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem 2rem;
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-weight: 600;
+}
+
+.footer-meta a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-tagline {
+  width: 100%;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* ---------- Backstory page ---------- */
+
+.backstory-header {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) var(--gap-section);
+}
+
+.backstory-header .container {
+  display: flex;
+  justify-content: center;
+}
+
+.backstory-photo {
+  margin-inline: auto;
+}
+
+/* ---------- Case study page ---------- */
+
+.case-hero {
+  padding-block: clamp(3rem, 7vw, 6rem) var(--gap-section);
+}
+
+.case-hero-back {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.case-hero-back:hover {
+  color: var(--primary-hover);
+}
+
+.case-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.case-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.case-title {
+  max-width: 20ch;
+  margin-top: 0.4rem;
+}
+
+.case-subtitle {
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin-top: 0.6rem;
+}
+
+.case-hero .pill-row {
+  margin-top: 1.75rem;
+}
+
+.case-hero .pill {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+/* ---------- Password gate ---------- */
+
+.password-gate {
+  padding-block: clamp(4rem, 12vw, 9rem);
+}
+
+.password-gate-box {
+  max-width: 420px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.password-gate-box h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.password-gate-box p {
+  color: var(--ink-soft);
+  margin-top: 0.75rem;
+}
+
+.password-gate-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.password-gate-form input {
+  flex: 1 1 220px;
+  padding: 0.85rem 1.1rem;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.password-gate-form input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.password-gate-error {
+  margin-top: 1rem;
+  color: var(--pill-rose);
+  font-weight: 600;
+}
+
+.snapshot {
+  padding-block-end: var(--gap-section);
+}
+
+.snapshot .container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+/* Reusable field-list (label/value pairs with hairline dividers) —
+   used inside .snapshot's two-column grid, and standalone in .case-body */
+
+.field-list {
+  border-top: 2px solid var(--divider);
+  margin: 0;
+}
+
+.field-list > div {
+  padding-block: 1.25rem;
+  border-bottom: 2px solid var(--divider);
+}
+
+.field-list dt {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.field-list dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.field-list dd ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.field-list dd li + li {
+  margin-top: 0.4rem;
+}
+
+.snapshot-image {
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--accent-b);
+}
+
+.case-body {
+  padding-block-end: var(--gap-section);
+}
+
+.case-body .container {
+  max-width: 72ch;
+}
+
+.case-body h1 {
+  margin-bottom: 2.5rem;
+}
+
+.case-body h2 {
+  margin-top: var(--gap-section);
+  margin-bottom: 1.25rem;
+}
+
+.case-body h2:first-of-type {
+  margin-top: 0;
+}
+
+.case-body h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.case-body p {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+.case-body ul {
+  margin: 0 0 1.1em;
+  padding-left: 1.25rem;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+.case-body li + li {
+  margin-top: 0.5rem;
+}
+
+.case-label {
+  display: block;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.case-image {
+  margin-block: 2.25rem;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--accent-b);
+}
+
+/* For tall/portrait screenshots (single phone screens) — caps height so they
+   read at the same visual size as the wide multi-screen shots elsewhere */
+.case-image-portrait {
+  display: flex;
+  justify-content: center;
+  height: 420px;
+}
+
+.case-image-portrait img,
+.case-image-portrait video {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.case-image-sm {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.pull-quote {
+  border: 2px solid var(--ink);
+  background: var(--accent-a);
+  border-radius: 14px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  margin-block: 2.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.pull-quote::before {
+  content: "\201C";
+}
+
+.pull-quote::after {
+  content: "\201D";
+}
+
+/* ---------- Case study prev/next pagination ---------- */
+
+.case-pagination {
+  padding-block: 2.5rem;
+}
+
+.case-pagination .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem 2rem;
+  flex-wrap: wrap;
+}
+
+.case-pagination-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 28ch;
+  text-decoration: none;
+  color: inherit;
+}
+
+.case-pagination-next {
+  margin-left: auto;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.case-pagination-arrow {
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--ink-soft);
+}
+
+.case-pagination-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-a-offset);
+  text-underline-offset: 4px;
+}
+
+.case-pagination-link:hover .case-pagination-title {
+  color: var(--primary-hover);
+}
+
+.case-pagination-meta {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 780px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "text";
+  }
+
+  .hero-photo-wrap {
+    grid-area: photo;
+    justify-self: start;
+    width: 200px;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-text {
+    grid-area: text;
+  }
+
+  .work-row {
+    grid-template-columns: 1fr;
+  }
+
+  .work-row:nth-child(even) .work-thumb {
+    order: initial;
+  }
+
+  .about .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "photo"
+      "copy";
+  }
+
+  .about-photo-wrap {
+    justify-self: start;
+    width: 200px;
+  }
+
+  .snapshot .container {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-image {
+    order: -1;
+  }
+}

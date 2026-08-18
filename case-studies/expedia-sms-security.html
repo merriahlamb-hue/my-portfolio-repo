@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Making security feel human — Expedia case study — Merriah Lamb</title>
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="back-link" href="../index.html#work">Merriah Lamb</a>
+      <div class="header-links">
+        <a href="../index.html#work">Work</a>
+        <a href="../backstory.html">My story</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="password-gate" id="password-gate">
+      <div class="container">
+        <div class="password-gate-box">
+          <h1>This case study is password protected.</h1>
+          <p>Enter the password to view it.</p>
+          <form id="password-gate-form" class="password-gate-form">
+            <input type="password" id="password-gate-input" placeholder="Password" autocomplete="off" required />
+            <button type="submit" class="btn btn-primary">Unlock</button>
+          </form>
+          <p class="password-gate-error" id="password-gate-error" hidden>Incorrect password. Try again.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="gate-content" hidden>
+
+    <section class="case-hero">
+      <div class="container">
+        <a class="case-hero-back" href="../index.html#work">← All work</a>
+        <div class="case-hero-grid">
+          <div class="case-hero-main">
+            <div class="case-eyebrow">
+              <span>Expedia · 2023 · Senior Content Designer</span>
+            </div>
+            <h1 class="case-title">Making security feel human for over 15 million travelers.</h1>
+            <p class="case-subtitle">How can we use SMS verification to make signing in feel faster, simpler, intuitive, and actually secure for Expedia travelers?</p>
+            <div class="pill-row">
+              <span class="pill pill-blue">Content strategy</span>
+              <span class="pill pill-gold">Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-body">
+      <div class="container">
+
+        <div class="case-image">
+          <img src="../Images/Expedia%20Images/ExpediaSecurityFlow%201.png" alt="Overview of the Expedia SMS security sign-in flow" />
+        </div>
+
+        <h2>Snapshot</h2>
+        <p>SMS-OTP reached over 15 million mobile numbers across Expedia and Hotels.com with an 85% flow completion rate.</p>
+
+        <dl class="field-list">
+          <div>
+            <dt>Process</dt>
+            <dd>
+              <ul>
+                <li>One quarter, 2024</li>
+                <li>One round of user testing</li>
+                <li>Figma collaboration, content docs, and syncs</li>
+                <li>Legal, Security, and Privacy reviews</li>
+                <li>Multiple content quality reviews</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Team</dt>
+            <dd>
+              <ul>
+                <li><strong>Core Team:</strong> Content Designer (me), UX Designer, UX Researcher, Product Manager, UX Design Lead.</li>
+                <li><strong>Stakeholders:</strong> Director of Product, Director of Marketing.</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Strategic impact</dt>
+            <dd>
+              <ul>
+                <li>Within a few months of release, SMS-OTP was processed by over 15 million mobile numbers, across Expedia and Hotels.com in the United States.</li>
+                <li>Bolstered by an 85% success rate for people completing the flow.</li>
+                <li>Reduced friction in security protocols by aligning Marketing, Legal, and UX goals.</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+
+        <h2>When users speak, the content changes.</h2>
+
+        <div class="case-image case-image-sm">
+          <img src="../Images/Expedia%20Images/UserTestingBefore.png" alt="Before screens used for moderated user testing" />
+        </div>
+
+        <span class="case-label">Before: screens for moderated testing</span>
+        <ul>
+          <li>Users easily navigated the screens and appreciated the added sense of security.</li>
+          <li>Here's a great example of a content battle: the marketing team wanted to add a marketing opt-in checkbox to a security flow. This was a hill I was willing to die on — I couldn't fathom being the content person who let the marketing checkbox slide into the flow.</li>
+          <li>Testing showed users found it distracting and confusing in a security flow. 9 out of 10 users didn't check the box. I used this data to successfully get the checkbox removed, keeping the focus entirely on security. I'm all for marketing, but not when it messes with core trust.</li>
+        </ul>
+
+        <div class="case-image case-image-sm">
+          <img src="../Images/Expedia%20Images/AfterUserTesting.png" alt="After screens showing what changed following user testing" />
+        </div>
+
+        <span class="case-label">After: what changed</span>
+        <ul>
+          <li>Tweaked wording to reflect user suggestions for improved clarity.</li>
+          <li>Added a legal disclaimer to address potential fees associated with the feature.</li>
+          <li>Met with stakeholders to have a conversation about removing the out-of-place marketing checkbox. It was a lot easier to have this conversation with user data to back up our position.</li>
+        </ul>
+
+        <h2>Your data, your call. Period.</h2>
+
+        <div class="case-image">
+          <img src="../Images/Expedia%20Images/DeleteFlow.png" alt="Flow for deleting a mobile number from account settings" />
+        </div>
+
+        <span class="case-label">Deleting your mobile number</span>
+        <p>We added a way for travelers to delete their mobile number directly from settings. This wasn't in the original product requirements.</p>
+        <p>It should have been. Asking someone to add personal information without a way to remove it isn't a security feature — it's a trap.</p>
+
+        <h3 class="heading-lg">When something goes wrong. Error recovery.</h3>
+        <p>Errors are frustrating, but they're also a chance to rebuild trust. Instead of dead ends, we gave users a clear next step: a plain-language explanation of what happened and exactly what to do about it. Since this was a new feature, I wrote all the error messages.</p>
+
+        <div class="case-image">
+          <img src="../Images/Expedia%20Images/ErrorMessages_Expedia.png" alt="Error message screens for the SMS verification flow" />
+        </div>
+
+        <h2>Key takeaways.</h2>
+        <p>I used to think the hardest part of content design was finding the right words. This project taught me the hardest part is wrangling all the stakeholders to get them on the same page.</p>
+        <p>Working across Legal, Security, Marketing, and UX meant every content decision landed in a room full of competing priorities. I learned quickly that taking an evidence-based approach — like "9 out of 10 users ignored this" — is the easiest way to sway stakeholders. Research isn't just a design input. It's a persuasion tool.</p>
+        <p>What I carry forward from this: users can't speak for themselves in a stakeholder meeting. But their behavior can, if you document it well enough and show up prepared to use it. That's the skill I didn't expect to leave with — and the one I use most.</p>
+
+      </div>
+    </section>
+
+    <nav class="case-pagination">
+      <div class="container">
+        <a class="case-pagination-link case-pagination-prev" href="vrbo-onekey-signin.html">
+          <span class="case-pagination-arrow">←</span>
+          <span class="case-pagination-title">Small copy, big impact.</span>
+          <span class="case-pagination-meta">Vrbo</span>
+        </a>
+        <a class="case-pagination-link case-pagination-next" href="blackboard-voice-system.html">
+          <span class="case-pagination-arrow">→</span>
+          <span class="case-pagination-title">Modernizing Blackboard Learn's voice: building a content system.</span>
+          <span class="case-pagination-meta">Blackboard</span>
+        </a>
+      </div>
+    </nav>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 Merriah Lamb</span>
+      <div class="footer-meta">
+        <a href="mailto:merriahlamb@gmail.com">Start a conversation</a>
+        <a href="https://www.linkedin.com/in/merriah/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="footer-tagline">All content written and designed by a human (me). Site built with AI (operated by me).</p>
+    </div>
+  </footer>
+
+  <script src="../js/password-gate.js"></script>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
-title: "Small copy, big impact"
-subtitle: "How a single prompt converted 15% more guests into One Key members"
-client: "Vrbo / Expedia Group"
+title: "Small copy, big impact."
+subtitle: "How a single prompt converted 15% more guests into One Key members."
+client: "Vrbo"
 role: "Senior Content Designer"
 ---
 
