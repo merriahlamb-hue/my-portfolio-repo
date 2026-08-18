@@ -1,2 +1,6 @@
 .DS_Store
 .claude/
+
+# Draft source content — not linked from any published page, kept local-only
+Projects /
+backstory.md
