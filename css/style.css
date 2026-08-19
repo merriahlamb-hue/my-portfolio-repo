@@ -540,6 +540,10 @@ a.work-row:hover .work-title {
   margin-inline: auto;
 }
 
+.backstory-photo .about-photo img {
+  object-position: center 30%;
+}
+
 /* ---------- Case study page ---------- */
 
 .case-hero {
