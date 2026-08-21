@@ -286,6 +286,32 @@ p:last-child {
   gap: 1rem;
 }
 
+.pill-stagger {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.pill-stagger-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pill-stagger-row:nth-child(1) {
+  transform: translateY(0);
+}
+
+.pill-stagger-row:nth-child(2) {
+  margin-left: clamp(0px, 6vw, 3rem);
+  transform: translateY(-8px);
+}
+
+.pill-stagger-row:nth-child(3) {
+  margin-left: clamp(0px, 10vw, 5rem);
+  transform: translateY(4px);
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
