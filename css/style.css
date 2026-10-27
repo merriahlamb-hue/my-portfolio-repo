@@ -123,6 +123,7 @@ p:last-child {
 /* ---------- Header ---------- */
 
 .site-header {
+  background: var(--bg);
   padding-block: 2.25rem;
   border-bottom: 2px solid var(--divider);
 }
@@ -157,6 +158,7 @@ p:last-child {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: var(--periwinkle);
+  opacity: 0.8;
 }
 
 .header-links {
