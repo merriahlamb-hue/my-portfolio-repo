@@ -21,7 +21,7 @@
   --pill-gold: #c9a66b;
   --pill-navy: #0f2a5c;
   --pill-rose: #d98ca0;
-  --dot-color: rgba(140, 152, 224, 0.4); /* light periwinkle — quiet background texture */
+  --dot-color: rgba(102, 120, 240, 0.7); /* saturated periwinkle — background texture */
   --max-width: 1100px;
   --gap-section: clamp(4rem, 8vw, 8.5rem);
 }
