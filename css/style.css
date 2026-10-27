@@ -382,6 +382,8 @@ p:last-child {
   border-bottom: 2px solid var(--divider);
   text-decoration: none;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.12s ease;
 }
 
 .work-row:nth-child(even) .work-thumb {
@@ -398,16 +400,34 @@ p:last-child {
 
 /* Hover affordance for the whole card: the thumbnail lifts off a flat
    offset block (no blur, same language as the hero photo) and the title
-   underlines. */
-.work-row:hover .work-thumb,
+   underlines. Only on devices that can really hover, so it doesn't stick
+   on after a tap on phones. */
+@media (hover: hover) {
+  .work-row:hover .work-thumb {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--accent-a-offset);
+  }
+}
+
 .work-row:focus-visible .work-thumb {
   transform: translate(-4px, -4px);
   box-shadow: 8px 8px 0 var(--accent-a-offset);
 }
 
+/* Press / tap confirmation: the whole card dips slightly and the title
+   underlines while a finger (or mouse button) is down. */
+.work-row:active {
+  transform: scale(0.98);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .work-thumb {
+  .work-thumb,
+  .work-row {
     transition: none;
+  }
+
+  .work-row:active {
+    transform: none;
   }
 }
 
@@ -442,8 +462,17 @@ p:last-child {
   margin-bottom: 0;
 }
 
-.work-row:hover .work-title,
-.work-row:focus-visible .work-title {
+@media (hover: hover) {
+  .work-row:hover .work-title {
+    color: var(--primary-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+}
+
+.work-row:focus-visible .work-title,
+.work-row:active .work-title {
   color: var(--primary-hover);
   text-decoration: underline;
   text-decoration-thickness: 2px;
