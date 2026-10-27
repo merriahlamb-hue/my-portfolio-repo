@@ -7,7 +7,7 @@
 :root {
   --bg: #ffffff;
   --ink: #000000;
-  --ink-soft: #595959;      /* secondary/body text grey */
+  --ink-soft: #1a1a1a;      /* secondary/body text — near-black */
   --accent-a: #f5f5f5;      /* subtle off-white surface — hero card, pull-quote */
   --accent-a-offset: #d6d6d6; /* mid-light grey — decorative offset shapes & underlines */
   --accent-b: #ececec;      /* mid-grey panel fill — footer, image frames */
@@ -22,7 +22,7 @@
   --pill-navy: #0f2a5c;
   --pill-rose: #d98ca0;
   --periwinkle: #6678f0;    /* solid periwinkle — favicon, name dot */
-  --dot-color: rgba(102, 120, 240, 0.7); /* saturated periwinkle — background texture */
+  --dot-color: rgba(140, 152, 224, 0.4); /* light periwinkle — quiet background texture */
   --cursor-dot: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%236678f0' stroke='white' stroke-width='2'/%3E%3C/svg%3E") 12 12, auto; /* periwinkle dot cursor */
   --max-width: 1100px;
   --gap-section: clamp(4rem, 8vw, 8.5rem);
